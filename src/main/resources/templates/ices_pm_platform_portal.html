@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal</title>
+    <style>
+        html,body{
+            height: 100%;
+            background-color: lightgrey
+        }
+        .container{
+            height: 98.5%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container > div:last-child {
+             flex: 1;
+         }
+        button{
+            float: right;
+            border: none;
+            width: 200px;
+            height: 50px;
+            margin-top: 5px;
+            margin-right: 5px;
+            font-size:30px;font-family: Georgia;color: #ffffff;
+            background-color:brown;
+            padding-top: 5px;
+            border-radius: 5px;
+        }
+        select{
+            float: right;
+            border: none;
+            width: 200px;
+            height: 50px;
+            margin-top: 5px;
+            margin-right: 5px;
+            text-align: center;
+            text-align-last: center;
+            font-size:30px;font-family: Georgia;color: #ffffff;
+            background-color:brown;
+            padding-left: 20px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="nav">
+            <div id="header" style="color:#333333;">
+                <div id="organization" style="float:left;">
+                    <h1 style="font-size: 80px;font-family: Georgia;margin-top: 10px;margin-bottom: 0px">
+                        HIT ICES
+                    </h1>
+                </div>
+                <div id="project name" style="float:right;">
+                    <h1 style="font-size: 50px;font-family: Chalkboard;margin-top: 30px;margin-bottom: 0px">
+                        Process Mining Experiment Platform
+                    </h1>
+                </div>
+            </div>
+            <div id="introduction" style="clear:both;background-color:#333333;color:#ffffff;height:60px">
+                <div id="description" style="float:left;">
+                    <h1 style="font-size:30px;font-family: Georgia;margin-top: 13px;margin-left: 12px">
+                        Please choose your log file and algorithm then click submit button.
+                    </h1>
+                </div>
+                <button>Submit</button>
+                <select name="Algorithm" id="algo">
+                    <option value="select">Algorithm</option>
+                    <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
+                </select>
+                <button>Choose File</button>
+            </div>
+        </div>
+        <div id="display" style="clear:both;border-style:solid;border-width:4px;border-color:#333333;background-color: #ffffff">
+            <iframe style="height: 100%;width: 100%;border: none;" src="ices_pm_vspm/ices_pm_vspm_portal.html"></iframe>
+        </div>
+    </div>
+</body>
+<html/>
