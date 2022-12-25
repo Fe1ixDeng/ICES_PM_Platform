@@ -10,6 +10,11 @@ public class HTMLController {
     public String index(){
         return "ices_pm_platform_portal";
     }
+//    门户欢迎页面
+    @RequestMapping("/ices_pm_platform_defaultDisplay.html")
+    public String index_defaultDisplay(){
+        return "ices_pm_platform_defaultDisplay";
+    }
 //   vspm门户
     @RequestMapping("/ices_pm_vspm/ices_pm_vspm_portal.html")
     public String index_vspm(){

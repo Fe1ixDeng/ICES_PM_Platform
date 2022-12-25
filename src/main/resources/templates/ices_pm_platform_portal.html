@@ -16,10 +16,25 @@
         .container > div:last-child {
              flex: 1;
          }
+        a{
+            text-decoration: none;
+            text-align: center;
+            vertical-align: center;
+            float: right;
+            border: none;
+            width: 12%;
+            height: 50px;
+            margin-top: 5px;
+            margin-right: 5px;
+            font-size:30px;font-family: Georgia;color: #ffffff;
+            background-color:brown;
+            line-height: 50px;
+            border-radius: 5px;
+        }
         button{
             float: right;
             border: none;
-            width: 200px;
+            width: 12%;
             height: 50px;
             margin-top: 5px;
             margin-right: 5px;
@@ -31,7 +46,7 @@
         select{
             float: right;
             border: none;
-            width: 200px;
+            width: 12%;
             height: 50px;
             margin-top: 5px;
             margin-right: 5px;
@@ -49,12 +64,12 @@
         <div id="nav">
             <div id="header" style="color:#333333;">
                 <div id="organization" style="float:left;">
-                    <h1 style="font-size: 80px;font-family: Georgia;margin-top: 10px;margin-bottom: 0px">
+                    <h1 style="font-size: 80px;font-family: Georgia;margin-top: 10px;margin-bottom: 0">
                         HIT ICES
                     </h1>
                 </div>
                 <div id="project name" style="float:right;">
-                    <h1 style="font-size: 50px;font-family: Chalkboard;margin-top: 30px;margin-bottom: 0px">
+                    <h1 style="font-size: 50px;font-family: Chalkboard;margin-top: 30px;margin-bottom: 0">
                         Process Mining Experiment Platform
                     </h1>
                 </div>
@@ -65,17 +80,17 @@
                         Please choose your log file and algorithm then click submit button.
                     </h1>
                 </div>
-                <button>Submit</button>
-                <select name="Algorithm" id="algo">
+                <a href="ices_pm_vspm/ices_pm_vspm_portal.html" target="defaultDisplay" class="button">Submit</a>
+                <select id="algo" name="Algorithm">
                     <option value="select">Algorithm</option>
                     <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
                 </select>
-                <button>Choose File</button>
+                <a href="ices_pm_platform_defaultDisplay.html" target="defaultDisplay" class="button">Choose File</a>
             </div>
         </div>
         <div id="display" style="clear:both;border-style:solid;border-width:4px;border-color:#333333;background-color: #ffffff">
-            <iframe style="height: 100%;width: 100%;border: none;" src="ices_pm_vspm/ices_pm_vspm_portal.html"></iframe>
+            <iframe id="defaultDisplay" name="defaultDisplay" style="height: 100%;width: 100%;border: none;" src="ices_pm_platform_defaultDisplay.html"></iframe>
         </div>
     </div>
 </body>
-<html/>
+</html>
