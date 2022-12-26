@@ -15,6 +15,11 @@ public class HTMLController {
     public String index_defaultDisplay(){
         return "ices_pm_platform_defaultDisplay";
     }
+//    临时引用页面，在建功能可以引用
+    @RequestMapping("/ices_pm_platform_tempReference.html")
+    public String index_tempReference(){
+    return "ices_pm_platform_tempReference";
+}
 //   vspm门户
     @RequestMapping("/ices_pm_vspm/ices_pm_vspm_portal.html")
     public String index_vspm(){
