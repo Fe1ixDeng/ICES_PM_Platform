@@ -1,0 +1,6 @@
+#uploadFile的保存路径
+file-save-path: D:/uploadFile/
+#python脚本结果的保存路径
+python-save-path: D:/pythonFile/
+#python编译器地址
+python-interpreter-path: D:/anaconda/python.exe
