@@ -3,82 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Portal</title>
-    <script type="text/javascript">
-        function setSubmit() {
-            switch (document.getElementById("algo").value){
-                case "select":
-                    window.alert("Please choose an Algorithm!");
-                    break;
-                case "α-Algorithm":
-                    document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
-                    break;
-                case "HeuristicMining":
-                    document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
-                    break;
-                case "InductiveMining":
-                    document.getElementById("defaultDisplay").src = "python/IM";
-                    break;
-                case "VSPM":
-                    document.getElementById("defaultDisplay").src = "ices_pm_vspm/ices_pm_vspm_portal.html";
-                    break;
-            }
-        }
-    </script>
-    <style>
-        html,body{
-            height: 100%;
-            background-color: lightgrey
-        }
-        .container{
-            height: 98.5%;
-            display: flex;
-            flex-direction: column;
-        }
-        .container > div:last-child {
-             flex: 1;
-         }
-        a{
-            text-decoration: none;
-            text-align: center;
-            vertical-align: center;
-            float: right;
-            border: none;
-            width: 12%;
-            height: 50px;
-            margin-top: 5px;
-            margin-right: 5px;
-            font-size:30px;font-family: Georgia,serif;color: #ffffff;
-            background-color:brown;
-            line-height: 50px;
-            border-radius: 5px;
-        }
-        button{
-            float: right;
-            border: none;
-            width: 12%;
-            height: 50px;
-            margin-top: 5px;
-            margin-right: 5px;
-            font-size:30px;font-family: Georgia,serif;color: #ffffff;
-            background-color:brown;
-            padding-top: 5px;
-            border-radius: 5px;
-        }
-        select{
-            float: right;
-            border: none;
-            width: 12%;
-            height: 50px;
-            margin-top: 5px;
-            margin-right: 5px;
-            text-align: center;
-            text-align-last: center;
-            font-size:30px;font-family: Georgia,serif;color: #ffffff;
-            background-color:brown;
-            padding-left: 20px;
-            padding-top: 5px;
-        }
-    </style>
+    <script type="text/javascript" src="/js/js-portal.js"></script>
+    <link rel="stylesheet" href="/css/style-portal.css">
 </head>
 <body>
     <div class="container">
@@ -105,9 +31,9 @@
                 <button id="submit" onclick="setSubmit()">Submit</button>
                 <label for="algo"></label><select id="algo" name="algo">
                     <option value="select">Algorithm</option>
-                    <option value="α-Algorithm">α-Algorithm</option>    <!--还没做-->
+                    <option value="aAlgorithm">α-Algorithm</option>
                     <option value="HeuristicMining">Heuristic Mining</option>   <!--还没做-->
-                    <option value="InductiveMining">Inductive Mining</option>   <!--还没做-->
+                    <option value="InductiveMining">Inductive Mining</option>
                     <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
                 </select>
                 <button onclick="upload.click()">
