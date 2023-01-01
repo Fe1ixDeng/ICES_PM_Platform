@@ -16,7 +16,7 @@
                     document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
                     break;
                 case "InductiveMining":
-                    document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
+                    document.getElementById("defaultDisplay").src = "python/IM";
                     break;
                 case "VSPM":
                     document.getElementById("defaultDisplay").src = "ices_pm_vspm/ices_pm_vspm_portal.html";
@@ -47,7 +47,7 @@
             height: 50px;
             margin-top: 5px;
             margin-right: 5px;
-            font-size:30px;font-family: Georgia;color: #ffffff;
+            font-size:30px;font-family: Georgia,serif;color: #ffffff;
             background-color:brown;
             line-height: 50px;
             border-radius: 5px;
@@ -59,7 +59,7 @@
             height: 50px;
             margin-top: 5px;
             margin-right: 5px;
-            font-size:30px;font-family: Georgia;color: #ffffff;
+            font-size:30px;font-family: Georgia,serif;color: #ffffff;
             background-color:brown;
             padding-top: 5px;
             border-radius: 5px;
@@ -73,7 +73,7 @@
             margin-right: 5px;
             text-align: center;
             text-align-last: center;
-            font-size:30px;font-family: Georgia;color: #ffffff;
+            font-size:30px;font-family: Georgia,serif;color: #ffffff;
             background-color:brown;
             padding-left: 20px;
             padding-top: 5px;
@@ -85,32 +85,35 @@
         <div id="nav">
             <div id="header" style="color:#333333;">
                 <div id="organization" style="float:left;">
-                    <h1 style="font-size: 80px;font-family: Georgia;margin-top: 10px;margin-bottom: 0">
+                    <h1 style="font-size: 80px;font-family: Georgia,serif;margin-top: 10px;margin-bottom: 0">
                         HIT ICES
                     </h1>
                 </div>
                 <div id="project name" style="float:right;">
-                    <h1 style="font-size: 50px;font-family: Chalkboard;margin-top: 30px;margin-bottom: 0">
+                    <h1 style="font-size: 50px;font-family: Chalkboard,serif;margin-top: 30px;margin-bottom: 0">
                         Process Mining Experiment Platform
                     </h1>
                 </div>
             </div>
             <div id="introduction" style="clear:both;background-color:#333333;color:#ffffff;height:60px">
                 <div id="description" style="float:left;">
-                    <h1 style="font-size:30px;font-family: Georgia;margin-top: 13px;margin-left: 12px">
+                    <h1 style="font-size:30px;font-family: Georgia,serif;margin-top: 13px;margin-left: 12px">
                         Please choose your log file and algorithm then click submit button.
                     </h1>
                 </div>
                 <!--以下是三个操作组建-->
                 <button id="submit" onclick="setSubmit()">Submit</button>
-                <select id="algo" name="algo">
+                <label for="algo"></label><select id="algo" name="algo">
                     <option value="select">Algorithm</option>
                     <option value="α-Algorithm">α-Algorithm</option>    <!--还没做-->
                     <option value="HeuristicMining">Heuristic Mining</option>   <!--还没做-->
                     <option value="InductiveMining">Inductive Mining</option>   <!--还没做-->
-                    <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>   <!--还没做-->
+                    <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
                 </select>
-                <a href="ices_pm_platform_defaultDisplay.html" target="defaultDisplay" class="button">Choose File</a>   <!--这里href要做传参-->
+                <button onclick="upload.click()">
+                    Choose File
+                    <input type="file" name="upload" id="upload" style="display: none;">
+                </button>
             </div>
         </div>
         <div id="display" style="clear:both;border-style:solid;border-width:4px;border-color:#333333;background-color: #ffffff">
