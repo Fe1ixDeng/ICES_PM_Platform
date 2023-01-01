@@ -15,6 +15,11 @@ public class HTMLController {
     public String index_defaultDisplay(){
         return "ices_pm_platform_defaultDisplay";
     }
+//    上传文件
+    @RequestMapping("/ices_pm_platform_chooseFile.html")
+    public String index_chooseFile(){
+        return "ices_pm_platform_chooseFile.html";
+    }
 //    临时引用页面，在建功能可以引用
     @RequestMapping("/ices_pm_platform_tempReference.html")
     public String index_tempReference(){
