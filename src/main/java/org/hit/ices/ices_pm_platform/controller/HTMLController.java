@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HTMLController {
 //    门户
-    @RequestMapping("/portal")
+    @RequestMapping("/")
     public String index(){
         return "ices_pm_platform_portal";
     }

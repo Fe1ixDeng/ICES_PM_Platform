@@ -27,14 +27,16 @@
                         Please choose your log file and algorithm then click submit button.
                     </h1>
                 </div>
+
                 <!--以下是三个操作组建-->
                 <button id="submit" onclick="setSubmit()">Submit</button>
                 <label for="algo"></label><select id="algo" name="algo">
                     <option value="select">Algorithm</option>
                     <option value="aAlgorithm">α-Algorithm</option>
-                    <option value="HeuristicMining">Heuristic Mining</option>   <!--还没做-->
+                    <option value="HeuristicMining">Heuristic Mining</option>
                     <option value="InductiveMining">Inductive Mining</option>
                     <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
+                    <!--在此处添加其他实验，并且在js中修改匹配-->
                 </select>
                 <button onclick="upload.click()">
                     Choose File
