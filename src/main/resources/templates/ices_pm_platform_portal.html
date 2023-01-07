@@ -7,46 +7,51 @@
     <link rel="stylesheet" href="/css/style-portal.css">
 </head>
 <body>
-    <div class="container">
-        <div id="nav">
-            <div id="header" style="color:#333333;">
-                <div id="organization" style="float:left;">
-                    <h1 style="font-size: 80px;font-family: Georgia,serif;margin-top: 10px;margin-bottom: 0">
-                        HIT ICES
-                    </h1>
-                </div>
-                <div id="project name" style="float:right;">
-                    <h1 style="font-size: 50px;font-family: Chalkboard,serif;margin-top: 30px;margin-bottom: 0">
-                        Process Mining Experiment Platform
-                    </h1>
-                </div>
+<div class="container">
+    <div id="nav">
+        <div id="header" style="color:#333333;">
+            <div id="organization" style="float:left;">
+                <h1 style="font-size: 80px;font-family: Georgia,serif;margin-top: 10px;margin-bottom: 0">
+                    HIT ICES
+                </h1>
             </div>
-            <div id="introduction" style="clear:both;background-color:#333333;color:#ffffff;height:60px">
-                <div id="description" style="float:left;">
-                    <h1 style="font-size:30px;font-family: Georgia,serif;margin-top: 13px;margin-left: 12px">
-                        Please choose your log file and algorithm then click submit button.
-                    </h1>
-                </div>
-
-                <!--以下是三个操作组建-->
-                <button id="submit" onclick="setSubmit()">Submit</button>
-                <label for="algo"></label><select id="algo" name="algo">
-                    <option value="select">Algorithm</option>
-                    <option value="aAlgorithm">α-Algorithm</option>
-                    <option value="HeuristicMining">Heuristic Mining</option>
-                    <option value="InductiveMining">Inductive Mining</option>
-                    <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
-                    <!--在此处添加其他实验，并且在js中修改匹配-->
-                </select>
-                <button onclick="upload.click()">
-                    Choose File
-                    <input type="file" name="upload" id="upload" style="display: none;">
-                </button>
+            <div id="project name" style="float:right;">
+                <h1 style="font-size: 50px;font-family: Chalkboard,serif;margin-top: 30px;margin-bottom: 0">
+                    Process Mining Experiment Platform
+                </h1>
             </div>
         </div>
-        <div id="display" style="clear:both;border-style:solid;border-width:4px;border-color:#333333;background-color: #ffffff">
-            <iframe id="defaultDisplay" name="defaultDisplay" style="height: 100%;width: 100%;border: none;" src="ices_pm_platform_defaultDisplay.html"></iframe>
+        <div id="introduction" style="clear:both;background-color:#333333;color:#ffffff;height:60px">
+            <div id="description" style="float:left;">
+                <h1 style="font-size:30px;font-family: Georgia,serif;margin-top: 13px;margin-left: 12px">
+                    Please choose your log file and algorithm then click submit button.
+                </h1>
+            </div>
+
+            <!--以下是三个操作组建-->
+            <button id="submit" onclick="setSubmit()">Submit</button>
+            <label for="algo"></label><select id="algo" name="algo">
+            <option value="select">Algorithm</option>
+            <option value="aAlgorithm">α-Algorithm</option>
+            <option value="HeuristicMining">Heuristic Mining</option>
+            <option value="InductiveMining">Inductive Mining</option>
+            <option value="VSPM">VSPM(A Value-Oriented Service Process Mining Algorithm)</option>
+            <!--在此处添加其他实验，并且在js中修改匹配-->
+        </select>
+            <!--上传文件-->
+            <form id="formUpload" action="/upload" onsubmit="return false" enctype="multipart/form-data" method="post">
+                <button onclick="file.click()">
+                    Choose File
+                    <input type="file" name="file" id="file" style="display: none;" oninput="uploadFile()">
+                </button>
+            </form>
         </div>
     </div>
+    <div id="display"
+         style="clear:both;border-style:solid;border-width:4px;border-color:#333333;background-color: #ffffff">
+        <iframe id="defaultDisplay" name="defaultDisplay" style="height: 100%;width: 100%;border: none;"
+                src="ices_pm_platform_defaultDisplay.html"></iframe>
+    </div>
+</div>
 </body>
 </html>

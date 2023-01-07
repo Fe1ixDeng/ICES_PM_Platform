@@ -9,20 +9,20 @@ import java.io.IOException;
 @RestController
 public class UploadController {
     @PostMapping("/upload")
-    public String up(MultipartFile logFile) throws IOException {
+    public String up(@RequestParam("file") MultipartFile logFile) throws IOException {
         String path = System.getProperty("user.dir") + "/src/main/resources/data_transfer_file/";
-        saveFile(logFile,path);
+        saveFile(logFile, path);
         return "上传成功";
     }
 
-    public void saveFile(MultipartFile logFile,String path) throws IOException {
+    public void saveFile(MultipartFile logFile, String path) throws IOException {
 //          判断存储的目录是否存在，如果不存在则创建
         File dir = new File(path);
 //          创建目录
-        if(!dir.exists())
+        if (!dir.exists())
             dir.mkdir();
 
-        File file = new File(path+"logFile.xes");
+        File file = new File(path + "logFile.xes");
         logFile.transferTo(file);
     }
 }

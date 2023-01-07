@@ -17,6 +17,8 @@ function setSubmit() {
             break;
     }
 }
-function selectFile() {
 
+function uploadFile() {
+    var file = document.getElementById('formUpload');
+    file.submit();
 }
