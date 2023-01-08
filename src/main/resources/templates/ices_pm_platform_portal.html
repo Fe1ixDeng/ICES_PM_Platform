@@ -39,12 +39,13 @@
             <!--在此处添加其他实验，并且在js中修改匹配-->
         </select>
             <!--上传文件-->
-            <form id="formUpload" action="/upload" onsubmit="return false" enctype="multipart/form-data" method="post">
+            <form id="formUpload" action="/upload" onsubmit="return false" enctype="multipart/form-data" method="post" target="iframeForm">
                 <button onclick="file.click()">
                     Choose File
                     <input type="file" name="file" id="file" style="display: none;" oninput="uploadFile()">
                 </button>
             </form>
+            <iframe name="iframeForm" style="display: none" src=""></iframe>
         </div>
     </div>
     <div id="display"
