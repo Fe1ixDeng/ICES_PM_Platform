@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>ices_pm_im_logInfo</title>
+    <link rel="stylesheet" href="/css/style-table.css">
 </head>
 <body>
-    <h1>ices_pm_im_logInfo</h1>
+    <table style="width: 100%">
+        <caption>Overall log information</caption>
+        <thead>
+        <tr>
+            <th>Item
+            <th>Statistics
+        </thead>
+        <tbody>
+        <tr>
+            <td>Number of Traces
+            <td><p th:text="${LogInfo.getNumberOfTraces()}"></p>
+        <tr>
+            <td>Number of Events
+            <td><p th:text="${LogInfo.getNumberOfEvents()}"></p>
+        <tr>
+            <td>Number of Event Types
+            <td><p th:text="${LogInfo.getNameClasses().size()}"></p>
+        <tr>
+            <td>Number of Participants
+            <td><p th:text="${LogInfo.getResourceClasses().size()}"></p>
+        <tr>
+            <td>Start Time
+            <td><p th:text="${LogInfo.getLogTimeBoundaries().getStartDate()}"></p>
+        <tr>
+            <td>End Time
+            <td><p th:text="${LogInfo.getLogTimeBoundaries().getEndDate()}"></p>
+        </tbody>
+    </table>
 </body>
 </html>
