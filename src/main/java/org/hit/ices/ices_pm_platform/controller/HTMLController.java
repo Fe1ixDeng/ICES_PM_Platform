@@ -10,12 +10,10 @@ import java.io.IOException;
 
 @Controller
 public class HTMLController {
-
-
-    @Value("${file-save-path}")
-    private String fileSavePath;
-    @Autowired
-    private InductiveMinerService inductiveMinerService;
+//    @Value("${file-save-path}")
+//    private String fileSavePath;
+//    @Autowired
+//    private InductiveMinerService inductiveMinerService;
 
 //    门户
     @RequestMapping("/")
@@ -86,11 +84,13 @@ public class HTMLController {
 //    im门户
     @RequestMapping("/ices_pm_im/ices_pm_im_portal.html")
     public String index_im() throws IOException {
-        return inductiveMinerService.IM();
+        return "ices_pm_im/ices_pm_im_portal";
     }
 //    im展示页面
     @RequestMapping("/ices_pm_im/ices_pm_im_default.html")
     public String index_im_default(){return "ices_pm_im/ices_pm_im_default";}
+    @RequestMapping("/ices_pm_im/ices_pm_im_instanceInfo.html")
+    public String index_im_instanceInfo(){return "ices_pm_im/ices_pm_im_instanceInfo";}
     @RequestMapping("/ices_pm_im/ices_pm_im_variantInfo.html")
     public String index_im_variantInfo(){
         return "ices_pm_im/ices_pm_im_variantInfo";

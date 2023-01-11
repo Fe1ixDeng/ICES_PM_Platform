@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-@Service
+//@Service
 public class InductiveMinerService {
 //    从yml中读取python解释器的地址
     @Value("${python-interpreter-path}")

@@ -1,9 +1,3 @@
-#uploadFile的保存路径
-file-save-path: /src/main/resources/data_transfer_file/
-#python脚本结果的保存路径
-python-save-path: /src/main/resources/data_transfer_file/
-#python编译器地址
-python-interpreter-path: /src/main/resources/python_interpreter/ICES_PM_Platform/python.exe
 spring:
   thymeleaf:
     cache: false
