@@ -6,6 +6,9 @@ public class EndEvent extends Element {
     @JacksonXmlProperty(isAttribute = true)
     private String id;
 
+    public EndEvent() {
+    }
+
     public EndEvent(String id) {
         this.id = id;
     }

@@ -10,6 +10,9 @@ public class SequenceFlow extends Element {
     @JacksonXmlProperty(isAttribute = true)
     private String targetRef;
 
+    public SequenceFlow() {
+    }
+
     public SequenceFlow(String id, String sourceRef, String targetRef) {
         this.id = id;
         this.sourceRef = sourceRef;

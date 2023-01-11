@@ -12,8 +12,11 @@ public class BPMNEdge {
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
     @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "omgdi:waypoint")
+    @JacksonXmlProperty(localName = "waypoint")
     private List<waypoint> waypoint = new ArrayList<>();
+
+    public BPMNEdge() {
+    }
 
     public BPMNEdge(String id, String bpmnElement) {
         this.id = id;

@@ -6,15 +6,14 @@ import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.process.Process;
 
 public class Definitions {
     private Process process;
+
+    @JacksonXmlProperty(localName = "bpmndi:BPMNDiagram")
     private BPMNDiagram bpmnDiagram;
 
-    public Definitions() {}
+    public Definitions() {
+    }
     public Definitions(Process process) {
         this.process = process;
-    }
-    public Definitions(Process process, BPMNDiagram bpmnDiagram) {
-        this.process = process;
-        this.bpmnDiagram = bpmnDiagram;
     }
 
     @JacksonXmlProperty(isAttribute = true)

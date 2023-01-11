@@ -6,6 +6,9 @@ public class StartEvent extends Element {
     @JacksonXmlProperty(isAttribute = true)
     private String id;
 
+    public StartEvent() {
+    }
+
     public StartEvent(String id) {
         this.id = id;
     }

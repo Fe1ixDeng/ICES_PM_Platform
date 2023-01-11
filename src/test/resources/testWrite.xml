@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" exporter="Camunda Modeler" exporterVersion="5.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI">
+  <process id="p1" name="processOne">
+    <startEvent id="p1_StartEvent"/>
+    <endEvent id="p1_EndEvent"/>
+    <exclusiveGateway id="p1_ExclusiveGateway"/>
+    <userTask id="p1_UserTask_1" name="Apply Repair"/>
+    <userTask id="p1_UserTask_2" name="User Identification"/>
+    <userTask id="p1_UserTask_3" name="Intelligent Response"/>
+    <userTask id="p1_UserTask_4" name="Manual Interaction"/>
+    <userTask id="p1_UserTask_5" name="Release Order"/>
+    <userTask id="p1_UserTask_6" name="Order Assignment"/>
+    <userTask id="p1_UserTask_7" name="Repair"/>
+    <userTask id="p1_UserTask_8" name="Test Repair"/>
+    <userTask id="p1_UserTask_Else" name="Restart Repair*3"/>
+    <userTask id="p1_UserTask_9" name="Success"/>
+    <userTask id="p1_UserTask_10" name="Service Evaluation"/>
+    <userTask id="p1_UserTask_11" name="Archive"/>
+    <sequenceFlow id="p1_SF1_1" sourceRef="p1_StartEvent" targetRef="p1_UserTask_1"/>
+    <sequenceFlow id="p1_SF1_2" sourceRef="p1_UserTask_1" targetRef="p1_UserTask_2"/>
+    <sequenceFlow id="p1_SF2_1" sourceRef="p1_UserTask_2" targetRef="p1_UserTask_3"/>
+    <sequenceFlow id="p1_SF3_1" sourceRef="p1_UserTask_3" targetRef="p1_UserTask_4"/>
+    <sequenceFlow id="p1_SF4_1" sourceRef="p1_UserTask_4" targetRef="p1_UserTask_5"/>
+    <sequenceFlow id="p1_SF5_1" sourceRef="p1_UserTask_5" targetRef="p1_UserTask_6"/>
+    <sequenceFlow id="p1_SF6_1" sourceRef="p1_UserTask_6" targetRef="p1_UserTask_7"/>
+    <sequenceFlow id="p1_SF7_1" sourceRef="p1_UserTask_7" targetRef="p1_UserTask_8"/>
+    <sequenceFlow id="p1_SF8_1" sourceRef="p1_UserTask_8" targetRef="p1_ExclusiveGateway"/>
+    <sequenceFlow id="p1_SF8_main_2" sourceRef="p1_ExclusiveGateway" targetRef="p1_UserTask_10"/>
+    <sequenceFlow id="p1_SF8_else_3" sourceRef="p1_ExclusiveGateway" targetRef="p1_UserTask_Else"/>
+    <sequenceFlow id="p1_SF_Else_1" sourceRef="p1_UserTask_Else" targetRef="p1_UserTask_7"/>
+    <sequenceFlow id="p1_SF9_1" sourceRef="p1_UserTask_9" targetRef="p1_UserTask_10"/>
+    <sequenceFlow id="p1_SF10_1" sourceRef="p1_UserTask_10" targetRef="p1_UserTask_11"/>
+    <sequenceFlow id="p1_SF11_1" sourceRef="p1_UserTask_11" targetRef="p1_EndEvent"/>
+  </process>
+  <bpmndi:BPMNDiagram id="diagram_p1">
+    <bpmndi:BPMNPlane id="BPMNPlane_bplane" bpmnElement="p1">
+      <bpmndi:BPMNEdge id="BPMNShape_p1_SF1_1" bpmnElement="p1_SF1_1">
+        <omgdi:waypoint x="130.0" y="340.0"/>
+        <omgdi:waypoint x="150.0" y="340.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</Definitions>

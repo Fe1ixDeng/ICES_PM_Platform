@@ -8,6 +8,9 @@ public class waypoint {
     @JacksonXmlProperty(isAttribute = true)
     private double y;
 
+    public waypoint() {
+    }
+
     public waypoint(double x, double y) {
         this.x = x;
         this.y = y;

@@ -12,6 +12,9 @@ public class Bounds {
     @JacksonXmlProperty(isAttribute = true)
     private double y;
 
+    public Bounds() {
+    }
+
     public Bounds(double height, double width, double x, double y) {
         this.height = height;
         this.width = width;

@@ -6,6 +6,9 @@ public class ExclusiveGateway extends Element {
     @JacksonXmlProperty(isAttribute = true)
     String id;
 
+    public ExclusiveGateway() {
+    }
+
     public ExclusiveGateway(String id) {
         this.id = id;
     }

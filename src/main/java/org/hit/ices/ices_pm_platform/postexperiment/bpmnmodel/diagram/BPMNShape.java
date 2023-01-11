@@ -7,8 +7,11 @@ public class BPMNShape {
     private String id;
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
-    @JacksonXmlProperty(localName = "omgdc:Bounds")
+    @JacksonXmlProperty(localName = "Bounds")
     private Bounds bounds;
+
+    public BPMNShape() {
+    }
 
     public BPMNShape(String id, String bpmnElement, Bounds bounds) {
         this.id = id;

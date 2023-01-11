@@ -13,11 +13,14 @@ public class BPMNPlane {
     private String bpmnElement;
 
     @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "bpmndi:BPMNEdge")
+    @JacksonXmlProperty(localName = "BPMNEdge")
     private List<BPMNEdge> bpmnEdge = new ArrayList<>();
     @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "bpmndi:BPMNShape")
+    @JacksonXmlProperty(localName = "BPMNShape")
     private List<BPMNShape> bpmnShape = new ArrayList<>();
+
+    public BPMNPlane() {
+    }
 
     public BPMNPlane(String id, String bpmnElement) {
         this.id = id;

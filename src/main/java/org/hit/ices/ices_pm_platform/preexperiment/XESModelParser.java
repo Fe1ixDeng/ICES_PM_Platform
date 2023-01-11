@@ -5,7 +5,6 @@ import org.deckfour.xes.in.*;
 import org.deckfour.xes.info.XLogInfo;
 import org.deckfour.xes.info.XLogInfoFactory;
 import org.deckfour.xes.model.XLog;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

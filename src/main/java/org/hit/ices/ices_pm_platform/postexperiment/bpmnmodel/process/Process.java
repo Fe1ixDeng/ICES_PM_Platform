@@ -21,6 +21,9 @@ public class Process {
     @JacksonXmlElementWrapper(useWrapping = false)
     private List<SequenceFlow> sequenceFlow = new ArrayList<>();
 
+    public Process() {
+    }
+
     public Process(String id) {
         this.id = id;
     }

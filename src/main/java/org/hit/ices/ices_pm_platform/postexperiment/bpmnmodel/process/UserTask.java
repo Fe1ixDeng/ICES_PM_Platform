@@ -8,6 +8,9 @@ public class UserTask extends Element {
     @JacksonXmlProperty(isAttribute = true)
     private String name;
 
+    public UserTask() {
+    }
+
     public UserTask(String id, String name) {
         this.id = id;
         this.name = name;

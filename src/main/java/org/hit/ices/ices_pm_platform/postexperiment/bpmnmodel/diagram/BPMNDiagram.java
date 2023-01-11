@@ -5,11 +5,19 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 public class BPMNDiagram {
     @JacksonXmlProperty(isAttribute = true)
     private String id;
-    @JacksonXmlProperty(localName = "bpmndi:BPMNPlane")
-    BPMNPlane bpmnPlane;
+    @JacksonXmlProperty(localName = "BPMNPlane")
+    private BPMNPlane bpmnPlane;
+
+    public BPMNDiagram() {
+    }
 
     public BPMNDiagram(String id) {
         this.id = id;
+    }
+
+    public BPMNDiagram(String id, BPMNPlane bpmnPlane) {
+        this.id = id;
+        this.bpmnPlane = bpmnPlane;
     }
 
     public String getId() {
