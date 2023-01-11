@@ -13,9 +13,11 @@ public class BPMNPlane {
     private String bpmnElement;
 
     @JacksonXmlElementWrapper(useWrapping = false)
+//    @JacksonXmlProperty(localName = "bpmndi:BPMNEdge") 写xml的时候用这个，读的时候用下面的
     @JacksonXmlProperty(localName = "BPMNEdge")
     private List<BPMNEdge> bpmnEdge = new ArrayList<>();
     @JacksonXmlElementWrapper(useWrapping = false)
+//    @JacksonXmlProperty(localName = "bpmndi:BPMNShape") 写xml的时候用这个，读的时候用下面的
     @JacksonXmlProperty(localName = "BPMNShape")
     private List<BPMNShape> bpmnShape = new ArrayList<>();
 

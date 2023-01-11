@@ -7,6 +7,7 @@ public class BPMNShape {
     private String id;
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
+//    @JacksonXmlProperty(localName = "omgdc:Bounds") 写xml的时候用这个，读的时候用下面的
     @JacksonXmlProperty(localName = "Bounds")
     private Bounds bounds;
 

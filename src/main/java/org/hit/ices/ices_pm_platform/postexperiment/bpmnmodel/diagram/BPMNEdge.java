@@ -12,6 +12,7 @@ public class BPMNEdge {
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
     @JacksonXmlElementWrapper(useWrapping = false)
+//    @JacksonXmlProperty(localName = "omgdi:waypoint") 写xml的时候用这个，读的时候用下面的
     @JacksonXmlProperty(localName = "waypoint")
     private List<waypoint> waypoint = new ArrayList<>();
 

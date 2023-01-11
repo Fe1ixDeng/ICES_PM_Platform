@@ -4,10 +4,17 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram.BPMNDiagram;
 import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.process.Process;
 
+import javax.xml.bind.annotation.XmlNs;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchema;
+
+
+@XmlRootElement(name="Order", namespace="http://www.xl.com.cn/msg")
 public class Definitions {
     private Process process;
 
-    @JacksonXmlProperty(localName = "bpmndi:BPMNDiagram")
+//    @JacksonXmlProperty(localName = "bpmndi:BPMNDiagram") 写xml的时候用这个，读的时候用下面的
+    @JacksonXmlProperty(localName = "BPMNDiagram")
     private BPMNDiagram bpmnDiagram;
 
     public Definitions() {
