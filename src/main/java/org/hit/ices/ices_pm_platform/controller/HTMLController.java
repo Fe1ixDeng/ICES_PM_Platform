@@ -1,10 +1,22 @@
 package org.hit.ices.ices_pm_platform.controller;
 
+import org.hit.ices.ices_pm_platform.service.InductiveMinerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
+
 @Controller
 public class HTMLController {
+
+
+    @Value("${file-save-path}")
+    private String fileSavePath;
+    @Autowired
+    private InductiveMinerService inductiveMinerService;
+
 //    门户
     @RequestMapping("/")
     public String index(){
@@ -73,8 +85,8 @@ public class HTMLController {
 
 //    im门户
     @RequestMapping("/ices_pm_im/ices_pm_im_portal.html")
-    public String index_im(){
-        return "ices_pm_im/ices_pm_im_portal";
+    public String index_im() throws IOException {
+        return inductiveMinerService.IM();
     }
 //    im展示页面
     @RequestMapping("/ices_pm_im/ices_pm_im_default.html")
