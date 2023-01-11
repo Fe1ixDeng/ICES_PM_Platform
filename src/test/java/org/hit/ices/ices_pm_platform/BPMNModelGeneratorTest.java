@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BPMNModelGeneratorTest extends IcesPmPlatformApplicationTests{
-    private Definitions definitions = new Definitions(new Process());
+    private Definitions definitions = new Definitions(new Process("p1"));
     @Test
     public void testGenerateDefinitions() {
         Assert.assertNotNull(definitions.getProcess());

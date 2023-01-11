@@ -21,6 +21,12 @@ public class HTMLController {
 
 /*----以下是实验部分----------------------------------------------------------------------------------------------------*/
 
+//    各实验获取日志信息
+    @RequestMapping("/ices_pm_platform_logInfo.html")
+    public String index_logInfo(){
+    return "ices_pm_platform_logInfo";
+}
+
 //    alpha算法门户
     @RequestMapping("/ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_portal.html")
     public String index_alphaalgorithm(){
@@ -29,10 +35,6 @@ public class HTMLController {
 //    alpha算法展示页面
     @RequestMapping("/ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_default.html")
     public String index_alphaalgorithm_default(){return "ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_default";}
-    @RequestMapping("/ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_logInfo.html")
-    public String index_alphaalgorithm_logInfo(){
-        return "ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_logInfo";
-    }
     @RequestMapping("/ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_instanceInfo.html")
     public String index_alphaalgorithm_instanceInfo(){return "ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_instanceInfo";}
     @RequestMapping("/ices_pm_alphaalgorithm/ices_pm_alphaalgorithm_variantInfo.html")
@@ -54,10 +56,6 @@ public class HTMLController {
 //    hm展示页面
     @RequestMapping("/ices_pm_hm/ices_pm_hm_default.html")
     public String index_hm_default(){return "ices_pm_hm/ices_pm_hm_default";}
-    @RequestMapping("/ices_pm_hm/ices_pm_hm_logInfo.html")
-    public String index_hm_logInfo(){
-        return "ices_pm_hm/ices_pm_hm_logInfo";
-    }
     @RequestMapping("/ices_pm_hm/ices_pm_hm_instanceInfo.html")
     public String index_hm_instanceInfo(){return "ices_pm_hm/ices_pm_hm_instanceInfo";}
     @RequestMapping("/ices_pm_hm/ices_pm_hm_variantInfo.html")
@@ -81,12 +79,6 @@ public class HTMLController {
 //    im展示页面
     @RequestMapping("/ices_pm_im/ices_pm_im_default.html")
     public String index_im_default(){return "ices_pm_im/ices_pm_im_default";}
-    @RequestMapping("/ices_pm_im/ices_pm_im_logInfo.html")
-    public String index_im_logInfo(){
-        return "ices_pm_im/ices_pm_im_logInfo";
-    }
-    @RequestMapping("/ices_pm_im/ices_pm_im_instanceInfo.html")
-    public String index_im_instanceInfo(){return "ices_pm_im/ices_pm_im_instanceInfo";}
     @RequestMapping("/ices_pm_im/ices_pm_im_variantInfo.html")
     public String index_im_variantInfo(){
         return "ices_pm_im/ices_pm_im_variantInfo";
@@ -109,10 +101,6 @@ public class HTMLController {
     @RequestMapping("/ices_pm_vspm/ices_pm_vspm_default.html")
     public String index_vspm_default(){
         return "ices_pm_vspm/ices_pm_vspm_default";
-    }
-    @RequestMapping("/ices_pm_vspm/ices_pm_vspm_logInfo.html")
-    public String index_vspm_logInfo(){
-        return "ices_pm_vspm/ices_pm_vspm_logInfo";
     }
     @RequestMapping("/ices_pm_vspm/ices_pm_vspm_instanceInfo.html")
     public String index_vspm_instanceInfo(){return "ices_pm_vspm/ices_pm_vspm_instanceInfo";}

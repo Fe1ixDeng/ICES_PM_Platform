@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ices_pm_im_logInfo</title>
+    <title>ices_pm_platform_logInfo</title>
     <link rel="stylesheet" href="/css/style-table.css">
 </head>
 <body>
@@ -16,22 +16,22 @@
         <tbody>
         <tr>
             <td>Number of Traces
-            <td><p th:text="${LogInfo.getNumberOfTraces()}"></p>
+            <td><p th:text="${LogInfo.numberOfTraces}"></p>
         <tr>
             <td>Number of Events
-            <td><p th:text="${LogInfo.getNumberOfEvents()}"></p>
+            <td><p th:text="${LogInfo.numberOfEvents}"></p>
         <tr>
             <td>Number of Event Types
-            <td><p th:text="${LogInfo.getNameClasses().size()}"></p>
+            <td><p th:text="${LogInfo.numberOfEventTypes}"></p>
         <tr>
             <td>Number of Participants
-            <td><p th:text="${LogInfo.getResourceClasses().size()}"></p>
+            <td><p th:text="${LogInfo.numberOfParticipants}"></p>
         <tr>
             <td>Start Time
-            <td><p th:text="${LogInfo.getLogTimeBoundaries().getStartDate()}"></p>
+            <td><p th:text="${LogInfo.startTime}"></p>
         <tr>
             <td>End Time
-            <td><p th:text="${LogInfo.getLogTimeBoundaries().getEndDate()}"></p>
+            <td><p th:text="${LogInfo.endTime}"></p>
         </tbody>
     </table>
 </body>
