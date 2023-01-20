@@ -2,7 +2,7 @@ package org.hit.ices.ices_pm_platform.postexperiment;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.Definitions;
+import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforread.Definitions;
 
 import java.io.FileInputStream;
 import java.io.IOException;

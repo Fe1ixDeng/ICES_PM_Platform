@@ -1,4 +1,4 @@
-package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram;
+package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.diagram;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
@@ -7,8 +7,7 @@ public class BPMNShape {
     private String id;
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
-//    @JacksonXmlProperty(localName = "omgdc:Bounds") 写xml的时候用这个，读的时候用下面的
-    @JacksonXmlProperty(localName = "Bounds")
+    @JacksonXmlProperty(localName = "omgdc:Bounds")
     private Bounds bounds;
 
     public BPMNShape() {

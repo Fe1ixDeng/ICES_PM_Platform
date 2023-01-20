@@ -1,4 +1,4 @@
-package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram;
+package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.diagram;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -12,9 +12,8 @@ public class BPMNEdge {
     @JacksonXmlProperty(isAttribute = true)
     private String bpmnElement;
     @JacksonXmlElementWrapper(useWrapping = false)
-//    @JacksonXmlProperty(localName = "omgdi:waypoint") 写xml的时候用这个，读的时候用下面的
-    @JacksonXmlProperty(localName = "waypoint")
-    private List<waypoint> waypoint = new ArrayList<>();
+    @JacksonXmlProperty(localName = "omgdi:waypoint")
+    private List<org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.diagram.waypoint> waypoint = new ArrayList<>();
 
     public BPMNEdge() {
     }
@@ -40,11 +39,11 @@ public class BPMNEdge {
         this.bpmnElement = bpmnElement;
     }
 
-    public List<org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram.waypoint> getWaypoint() {
+    public List<org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.diagram.waypoint> getWaypoint() {
         return waypoint;
     }
 
-    public void setWaypoint(List<org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram.waypoint> waypoint) {
+    public void setWaypoint(List<org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.diagram.waypoint> waypoint) {
         this.waypoint = waypoint;
     }
 }

@@ -1,11 +1,11 @@
-package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram;
+package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforread.diagram;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-public class BPMNDiagram {
+public class BPMNDiagram{
     @JacksonXmlProperty(isAttribute = true)
     private String id;
-//    @JacksonXmlProperty(localName = "bpmndi:BPMNPlane") 写xml的时候用这个，读的时候用下面的
+
     @JacksonXmlProperty(localName = "BPMNPlane")
     private BPMNPlane bpmnPlane;
 

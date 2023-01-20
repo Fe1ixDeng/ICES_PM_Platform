@@ -3,7 +3,7 @@ package org.hit.ices.ices_pm_platform;
 import org.hit.ices.ices_pm_platform.postexperiment.BPMNModelGenerator;
 import org.hit.ices.ices_pm_platform.postexperiment.XMLReader;
 import org.hit.ices.ices_pm_platform.postexperiment.XMLWriter;
-import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.Definitions;
+import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforread.Definitions;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.io.IOException;
 public class PostExperimentTest extends IcesPmPlatformApplicationTests{
     @Test
     public void generateBPMNModelTest(){
-        Definitions definitions = new BPMNModelGenerator().generateBPMNModel();
+        org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.Definitions definitions = new BPMNModelGenerator().generateBPMNModel();
 
         System.out.println(definitions.getProcess().getId());
         System.out.println(definitions.getBpmnDiagram().getId());
@@ -30,10 +30,5 @@ public class PostExperimentTest extends IcesPmPlatformApplicationTests{
     public void readXmlTest() throws IOException {
         XMLReader xmlReader = new XMLReader();
         Definitions definitions = xmlReader.readXmlFile("src/test/resources/testWrite.xml");
-
-        System.out.println(definitions.getProcess().getId());
-        System.out.println(definitions.getProcess().getStartEvent().getId());
-        System.out.println(definitions.getBpmnDiagram().getId());
-        System.out.println(definitions.getBpmnDiagram().getBpmnPlane().getId() + " - " + definitions.getBpmnDiagram().getBpmnPlane().getBpmnElement());
     }
 }

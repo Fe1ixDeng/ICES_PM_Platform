@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
-import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.Definitions;
+import org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.Definitions;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,15 +1,15 @@
-package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.process;
+package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforwrite.process;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-public class ExclusiveGateway extends Element {
+public class StartEvent extends Element {
     @JacksonXmlProperty(isAttribute = true)
-    String id;
+    private String id;
 
-    public ExclusiveGateway() {
+    public StartEvent() {
     }
 
-    public ExclusiveGateway(String id) {
+    public StartEvent(String id) {
         this.id = id;
     }
 

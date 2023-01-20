@@ -1,4 +1,4 @@
-package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.diagram;
+package org.hit.ices.ices_pm_platform.postexperiment.bpmnmodel.bpmnmodelforread.diagram;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

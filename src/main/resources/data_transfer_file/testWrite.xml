@@ -4,7 +4,7 @@
     <startEvent/>
     <endEvent/>
   </process>
-  <BPMNDiagram id="diagram_p1">
-    <BPMNPlane id="plane_p1" bpmnElement="p1"/>
-  </BPMNDiagram>
+  <bpmndi:BPMNDiagram id="diagram_p1">
+    <bpmndi:BPMNPlane id="plane_p1" bpmnElement="p1"/>
+  </bpmndi:BPMNDiagram>
 </Definitions>

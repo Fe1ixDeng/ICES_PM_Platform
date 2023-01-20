@@ -18,6 +18,12 @@ function setSubmit() {
             case "VSPM":
                 document.getElementById("defaultDisplay").src = "ices_pm_vspm/ices_pm_vspm_portal.html";
                 break;
+            case "EMPM":
+                document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
+                break;
+            case "RIPM":
+                document.getElementById("defaultDisplay").src = "ices_pm_platform_tempReference.html";
+                break;
         }
     }else{
         window.alert("Please upload a log file first!");
